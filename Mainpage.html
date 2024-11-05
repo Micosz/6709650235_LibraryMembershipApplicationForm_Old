@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="Mainform">
+     <form id="Mainform">
          <label for="Thainame">ชื่อ - นามสกุล (ภาษาไทย): <span class="RequirePoint">***</span></label>
          <input id="Thainame" type="text" name="Thainame" required /> <br><br>
          
@@ -33,7 +33,59 @@
 
          <label for="dmy">วันเดือนปีเกิด: <span class="RequirePoint">***</span></label>
          <input type="date" id="dmy" name="dmy" required> <br><br>
-         
-    </form>
+
+         <label>ประเภทของหนังสือที่สนใจ: <span class="RequirePoint">***</span></label>
+         <input type="radio" id="fiction" name="bookType" value="fiction" onclick="showOptions('Fictionoptions')" required>
+         <label for="fiction">Fiction</label>
+         <input type="radio" id="nonfiction" name="bookType" value="nonfiction" onclick="showOptions('Nonfictionoptions')" required>
+         <label for="nonfiction">Non-Fiction</label> <br><br>
+        
+         <div id="Fictionoptions" class="options" style="display: none;">
+             <label for="Fictiongenre">เลือกประเภท Fiction:</label>
+             <select id="Fictiongenre" name="Fictiongenre">
+                 <option value="">เลือกประเภท Fiction</option>
+                 <option value="Adventure stories">เรื่องผจญภัย</option>
+                 <option value="Classics">คลาสสิก</option>
+                 <option value="Crime">อาชญากรรม</option>
+                 <option value="Fairy tales, fables, and folk tales">เทพนิยาย นิทานพื้นบ้าน และนิทานพื้นบ้าน</option>
+                 <option value="Fantasy">แฟนตาซี</option>
+                 <option value="Historical fiction">นิยายอิงประวัติศาสตร์</option>
+                 <option value="Horror">สยองขวัญ</option>
+                 <option value="Humour and satire">อารมณ์ขันและเสียดสี</option>
+                 <option value="Literary fiction">นิยายวรรณกรรม</option>
+                 <option value="Mystery">ลึกลับ</option>
+                 <option value="Poetry">บทกวี</option>
+                 <option value="Plays">บทละคร</option>
+                 <option value="Romance">โรแมนติก</option>
+                 <option value="Science fiction">นิยายวิทยาศาสตร์</option>
+                 <option value="Short stories">เรื่องสั้น</option>
+                 <option value="Thrillers">ระทึกขวัญ</option>
+                 <option value="War">สงคราม</option>
+                 <option value="Women’s fiction">นิยายสำหรับผู้หญิง</option>
+                 <option value="Young adult">วัยรุ่น</option>
+             </select> <br><br>
+         </div>
+
+         <div id="Nonfictionoptions" class="options" style="display: none;">
+             <label for="Nonfictiongenre">เลือกประเภท Non-Fiction:</label>
+             <select id="Nonfictiongenre" name="Nonfictiongenre">
+                 <option value="">เลือกประเภท Non-Fiction</option>
+                 <option value="Autobiography and memoir">อัตชีวประวัติและบันทึกความทรงจำ</option>
+                 <option value="Biography">ชีวประวัติ</option>
+                 <option value="Essays">เรียงความ</option>
+                 <option value="Non-fiction novel">นวนิยายสารคดี</option>
+                 <option value="Self-help">การพัฒนาตนเอง</option>
+             </select> <br><br>
+         </div>
+     </form>
+
+     <script>
+        function showOptions(optionId) 
+        {
+            document.getElementById('Fictionoptions').style.display = 'none';
+            document.getElementById('Nonfictionoptions').style.display = 'none';
+            document.getElementById(optionId).style.display = 'block';
+        }
+     </script>
 </body>
 </html>
