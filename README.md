@@ -1,2 +1,4 @@
-# 6709650235_LibraryMembershipApplicationForm
-Assignment 04: Basic HTML Forms
+# Assignment 04: Basic HTML Forms
+📋 Overview
+📂 Project Structure
+🎨 Customization & Styling
