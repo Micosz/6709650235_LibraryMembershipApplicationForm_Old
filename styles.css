@@ -2,6 +2,11 @@ body {
     background-color: azure;
 }
 
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
 .RequirePoint {
     color: red;
 }
