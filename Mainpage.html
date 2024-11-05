@@ -12,37 +12,50 @@
     </header>
 
      <form id="Mainform">
-         <label for="Thainame">ชื่อ - นามสกุล (ภาษาไทย): <span class="RequirePoint">***</span></label>
-         <input id="Thainame" type="text" name="Thainame" required /> <br><br>
+         <fieldset>
+             <legend>โปรดระบุชื่อของคุณ</legend><br>
+             <label for="Thainame">ชื่อ - นามสกุล (ภาษาไทย): <span class="RequirePoint">***</span></label>
+             <input id="Thainame" type="text" name="Thainame" required /> 
+             <br><br>
+             <label for="Thainame">ชื่อ - นามสกุล (ภาษาอังกฤษ): <span class="RequirePoint">***</span></label>
+         <input id="Thainame" type="text" name="Thainame" required /> 
+             <br><br>
+         </fieldset> <br>
+         <fieldset>
+             <legend>โปรดระบุเพศของคุณ <span class="RequirePoint">***</span></legend><br>
+             <input type="radio" id="male" name="gender" value="male" required>
+             <label for="male">ชาย</label>
+             <input type="radio" id="female" name="gender" value="female" required>
+             <label for="female">หญิง</label>
+             <input type="radio" id="Non-Binary" name="gender" value="Non-Binary" required>
+             <label for="Don't Want to tell">ไม่ระบุ</label> 
+             <br><br>
+         </fieldset> <br>
          
-         <label for="Thainame">ชื่อ - นามสกุล (ภาษาอังกฤษ): <span class="RequirePoint">***</span></label>
-         <input id="Thainame" type="text" name="Thainame" required /> <br><br>
-
-         <label>เพศ: <span class="RequirePoint">***</span></label>
-         <input type="radio" id="male" name="gender" value="male" required>
-         <label for="male">ชาย</label>
-         <input type="radio" id="female" name="gender" value="female" required>
-         <label for="female">หญิง</label>
-         <input type="radio" id="Non-Binary" name="gender" value="Non-Binary" required>
-         <label for="Don't Want to tell">ไม่ระบุ</label> <br><br>
 
          <label for="studentID">รหัสนักศึกษา: <span class="RequirePoint">***</span></label>
-         <input type="text" id="studentID" name="studentID" pattern="\d{10}" required> <br><br>
+         <input type="text" id="studentID" name="studentID" pattern="\d{10}" required> 
+         <br><br>
 
          <label for="faculty">คณะที่ศึกษา: <span class="RequirePoint">***</span></label>
-         <input type="text" id="faculty" name="faculty" required> <br><br>
+         <input type="text" id="faculty" name="faculty" required> 
+         <br><br>
 
          <label for="email">ที่อยู่อีเมล: <span class="RequirePoint">***</span></label>
-         <input type="email" id="email" name="email" required> <br><br>
+         <input type="email" id="email" name="email" required> 
+         <br><br>
 
          <label for="dmy">วันเดือนปีเกิด: <span class="RequirePoint">***</span></label>
-         <input type="date" id="dmy" name="dmy" required> <br><br>
-
-         <label>ประเภทของหนังสือที่สนใจ: <span class="RequirePoint">***</span></label>
-         <input type="radio" id="fiction" name="bookType" value="fiction" onclick="showOptions('Fictionoptions')" required>
+         <input type="date" id="dmy" name="dmy" required> 
+         <br><br>
+         
+         <fieldset>
+            <legend>ประเภทของหนังสือที่สนใจ <span class="RequirePoint">***</span></legend> <br>
+            <input type="radio" id="fiction" name="bookType" value="fiction" onclick="showOptions('Fictionoptions')" required>
          <label for="fiction">Fiction</label>
          <input type="radio" id="nonfiction" name="bookType" value="nonfiction" onclick="showOptions('Nonfictionoptions')" required>
-         <label for="nonfiction">Non-Fiction</label> <br><br>
+         <label for="nonfiction">Non-Fiction</label> 
+         <br><br>
         
          <div id="Fictionoptions" class="options" style="display: none;">
              <label for="Fictiongenre">เลือกประเภท Fiction:</label>
@@ -67,7 +80,8 @@
                  <option value="War">สงคราม</option>
                  <option value="Women’s fiction">นิยายสำหรับผู้หญิง</option>
                  <option value="Young adult">วัยรุ่น</option>
-             </select> <br><br>
+             </select> 
+             <br><br>
          </div>
 
          <div id="Nonfictionoptions" class="options" style="display: none;">
@@ -79,9 +93,11 @@
                  <option value="Essays">เรียงความ</option>
                  <option value="Non-fiction novel">นวนิยายสารคดี</option>
                  <option value="Self-help">การพัฒนาตนเอง</option>
-             </select> <br><br>
+             </select> 
+             <br><br>
          </div>
-
+        </fieldset> <br>
+         
          <input type="checkbox" id="newsletter" name="newsletter" value="yes">
          <label for="newsletter">ฉันยินดีที่จะรับข่าวสารจากห้องสมุด</label> <br><br>
 
